@@ -1,0 +1,16 @@
+---
+title: "Texas housing sales report"
+author: "Matti Meikäläinen"
+date: "`r paste(Sys.Date())`"
+output: pdf_document
+---
+
+## Number of sales
+
+The following chart shows the number of housing sales in three cities in Texas.
+Data is from the `txhousing` data set provided by the TAMU real estate center.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(dt, aes(date, sales, color=city)) + geom_point() + geom_smooth()
+```
+
